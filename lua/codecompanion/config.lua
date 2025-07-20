@@ -164,6 +164,7 @@ local defaults = {
           folds = {
             enabled = true, -- Fold tool output in the buffer?
             failure_words = { -- Words that indicate an error in the tool output. Used to apply failure highlighting
+              "cancelled",
               "error",
               "failed",
               "invalid",
@@ -1027,6 +1028,7 @@ You must create or modify a workspace file through a series of prompts over mult
         width = 0.45,
         relative = "editor",
         full_height = true,
+        sticky = false, -- chat buffer remains open when switching tabs
         opts = {
           breakindent = true,
           cursorcolumn = false,
